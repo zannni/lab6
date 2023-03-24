@@ -7,7 +7,10 @@ def encode(password):
     return npassword
 
 def decode(password_e):
-    pass
+    numbers = [int(n) for n in password_e]
+    new_numbers = [n - 3 for n in numbers]
+    output_string = "".join([str(n) for n in new_numbers])
+    return output_string
 
 def menu():
         print("Menu")
